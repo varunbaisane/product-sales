@@ -146,7 +146,7 @@ while choice == 5:
         else:
             print('Error...')
 
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~tfkfvuygkyugjb~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 update_id = input("Enter the id no which u want to update")
 n = int(input("Enter following nos. to update data from \n1-product id \n2-product name \n3-product cost price \n4-first half product selling price \n5-first half product sold"))
 m = input("Enter ur new data")
