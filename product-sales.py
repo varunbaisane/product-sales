@@ -1,5 +1,5 @@
 print('Product Sales Management')
-print('Enter Your Product Details for Two Halves of the Year.')
+print('Enter Your Product Details for Two Halves of the Year -->')
 h1_table = []
 h2_table = []
 col_heading = ['PRODUCT ID', 'NAME', 'COST PRICE', 'SELLING PRICE', 'UNITS SOLD', 'TOTAL AMOUNT', 'PROFIT', 'PROFIT %']
@@ -9,18 +9,20 @@ h2_table.append(col_heading)
 def enter_data():
     data_choice = 'yes'
     while data_choice.lower() == 'yes':
-        prod_id = input('Enter the ID of the Product: ')
-        prod_name = input('Enter the Name of your Product: ')
-        prod_cp = float(input('Enter the Cost Price of the Product: '))
+        prod_id = input('\ni)Enter the ID of the Product: ')
+        prod_name = input('\nii)Enter the Name of your Product: ')
+        prod_cp = float(input('\niii)Enter the Cost Price of the Product: '))
         prod_cp = round(prod_cp, 2)
 
-        h1_prod_sp = float(input('Enter the Selling Price of the Product: '))
+        print('\nI] Now Enter the values for First Half of the Year -->')
+        h1_prod_sp = float(input('\ni)Enter the Selling Price of the Product: '))
         h1_prod_sp = round(h1_prod_sp, 2)
-        h1_prod_sold = int(input('Enter the number of Units Sold: '))
+        h1_prod_sold = int(input('\nii)Enter the number of Units Sold: '))
 
-        h2_prod_sp = float(input('Enter the Selling Price of the Product: '))
+        print('\nII] Now Enter the values for First Half of the Year -->')
+        h2_prod_sp = float(input('\ni)Enter the Selling Price of the Product: '))
         h2_prod_sp = round(h2_prod_sp, 2)
-        h2_prod_sold = int(input('Enter the number of Units Sold: '))
+        h2_prod_sold = int(input('\nii)Enter the number of Units Sold: '))
 
         h1_cp_tot = h1_prod_sold * prod_cp
         h1_sp_tot = h1_prod_sold * h1_prod_sp
@@ -35,7 +37,7 @@ def enter_data():
         h1_table.append([prod_id, prod_name, prod_cp, h1_prod_sp, h1_prod_sold, h1_sp_tot, h1_profit, h1_profit_pc])
         h2_table.append([prod_id, prod_name, prod_cp, h2_prod_sp, h2_prod_sold, h2_sp_tot, h2_profit, h2_profit_pc])
 
-        data_choice = input('Want to Enter data for next Product?\nEnter "Yes" to enter data and Enter "No" to Exit:')
+        data_choice = input('\nWant to Enter data for next Product?\nEnter "Yes" to enter data and Enter "No" to Exit: ')
 
 def display_h1():
     h1_len = -1
@@ -47,7 +49,9 @@ def display_h1():
 
     h1_width = len(str(h1_w))
 
-    print('1ST HALF OF THE YEAR')
+    print('  --------------------  ')
+    print('| 1ST HALF OF THE YEAR |')
+    print('  --------------------  ')
     for row in range(len(h1_table)):
         for col in range(8):
             print('| {:<{}} '.format(h1_table[row][col], h1_width), end=' |')
@@ -63,20 +67,22 @@ def display_h2():
 
     h2_width = len(str(h2_w))
 
-    print('\n \n 2ND HALF OF THE YEAR')
+    print('  --------------------  ')
+    print('\n \n| 2ND HALF OF THE YEAR |')
+    print('  --------------------  ')
     for row in range(len(h2_table)):
         for col in range(8):
             print('| {:<{}} '.format(h2_table[row][col], h2_width), end=' |')
         print()
 
 def display_prod():
-    print()
+    print()#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def update_data():
-    print()
+    print()#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def delete_prod():
-    del_id = input("Enter the Product ID which you want to delete: ")
+    del_id = input("Enter the Product ID which you want to Delete: ")
     for i in range(0, len(h1_table)):
         if h1_table[i][0] == del_id:
             h1_table.pop(i)
@@ -88,14 +94,17 @@ def delete_prod():
             break
     display_h2()
 
-choice = 4
+def sort_data():
+    print()#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+choice = 5
 #main loop
-while choice == 4:
+while choice == 5:
     enter_data()
 
     choice = 1
-    while choice != 4:
-        choice = int(input('Commands to Perform Action:\n1 - Display Data \n2 - Update Data\n3 - Delete Particular Product Data\n4 - Enter more Product Data\n:=>'))
+    while choice != 5:
+        choice = int(input('Commands to Perform Action:\n1 - Display Data \n2 - Update Data\n3 - Delete Particular Product Data\n4 - Sort Data\n5 - Enter more Product Data\n6 - Enter "no" to Exit\n:=>'))
 
         #*Display Data
         if choice == 1:
@@ -128,13 +137,16 @@ while choice == 4:
             delete_prod()
         
         #*Again Enter Data
-        elif choice == 4:
+        elif choice == 5:
             print()
         
+        elif choice == 6:
+            break
+
         else:
             print('Error...')
 
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 update_id = input("Enter the id no which u want to update")
 n = int(input("Enter following nos. to update data from \n1-product id \n2-product name \n3-product cost price \n4-first half product selling price \n5-first half product sold"))
 m = input("Enter ur new data")
@@ -172,5 +184,4 @@ for u in range(0, len(h2_table)):
         elif q > 5:
             print("Enter valid no.")
 display_h2()
-
 
