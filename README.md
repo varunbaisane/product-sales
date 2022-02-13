@@ -9,5 +9,5 @@ Product Sales Management Tool created using basic Python (High School Project)
 - Modify/Delete Data of the Table
 
 ## Author
--[Varun Baisane](https://www.linkedin.com/in/varunbaisane/)
--[Aaditya Shirke](https://github.com/KingCoder01)
+- [Varun Baisane](https://www.linkedin.com/in/varunbaisane/)
+- [Aaditya Shirke](https://github.com/KingCoder01)
