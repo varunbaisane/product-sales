@@ -13,6 +13,12 @@ PSMT is a Database Management System Tool created for Managing data for the Sale
 - Delete data of a Particular Product
 - Sort Data According to Cost Price of the Product
 
+## Screenshots
+
+### Data Entry
+
+<!--![Entered Data](https://github.com/varunbaisane/product-sales/screenshots/display_bh.png)-->
+
 ## Author
 - [Varun Baisane](https://www.linkedin.com/in/varunbaisane/)
 - [Aaditya Shirke](https://github.com/KingCoder01)
