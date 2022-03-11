@@ -1,4 +1,4 @@
-# Product Sales Manageement Tool (PSMT)
+# Product Sales Management Tool (PSMT)
 
 ## Description
 PSMT is a Database Management System Tool created for Managing data for the Sales of the Product for ease in the analysis and management of the data.
