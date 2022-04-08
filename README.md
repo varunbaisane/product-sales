@@ -3,7 +3,7 @@
 ## Description
 PSMT is a Database Management System Tool created for ease in the analysis and management of the data for the Sales of the Product.
 
-[Run Code](https://replit.com/@varunbaisane/PSMT?v=1#main.py) | [View Code](https://github.com/varunbaisane/product-sales/blob/main/product-sales.py)
+[Run Code](https://replit.com/@varunbaisane/product-sales#product-sales.py) | [View Code](https://github.com/varunbaisane/product-sales/blob/main/product-sales.py)
 
 ## Features
 - PSMT has bunch of features of easily analysing the data for Sales of the Product for different times of the year.
